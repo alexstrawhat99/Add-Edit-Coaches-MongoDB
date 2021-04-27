@@ -1,0 +1,35 @@
+<h3>Insert Coaches</h3>
+
+<form action="/players" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{players._id}}">
+    <div class="form-group">
+        <label>Coach Name</label>
+        <input type="text" class="form-control" name="name" placeholder="name" value="{{players.name}}">
+        <div class="text-danger">
+            {{players.nameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Nation</label>
+        <input type="text" class="form-control" name="nations" placeholder="nations" value="{{players.nations}}">
+        <div class="text-danger">
+            {{players.nationsError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Team Coaching</label>
+            <input type="text" class="form-control" name="team" placeholder="team" value="{{players.team}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" placeholder="city"  value="{{players.city}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" href="/players/list" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/players/list"><i class="fa fa-list-alt"></i> View All</a>
+
+         
+      <input class="btn btn-primary" type="button" onclick="window.location.href='http://127.0.0.1:8000/homepage/';" value="ReturnToWebsite" />
+    
+    </div>
+</form>

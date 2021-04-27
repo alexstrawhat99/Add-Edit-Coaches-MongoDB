@@ -1,0 +1,27 @@
+<h3><a class="btn btn-secondary" href="/players"><i class="fa fa-plus"></i> Create New</a> Coach List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Coach Name</th>
+            <th>Nation</th>
+            <th>Team Coaching</th>
+            <th>City</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.nations}}</td>
+            <td>{{this.team}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/players/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/players/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+ <input class="btn btn-primary" type="button" onclick="window.location.href='http://127.0.0.1:8000/homepage/';" value="ReturnToWebsite" />
